@@ -10,7 +10,7 @@ import { UserFields } from '../utils/user.utils.js';
 export const getUserProfile = asyncHandler(async (req, res) => {
 	const user = await Prisma.user.findUnique({
 		where: {
-			id: 1
+			id: req.user.id
 		},
 		select: UserFields
 	});
