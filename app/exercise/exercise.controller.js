@@ -25,7 +25,11 @@ export const createNewExercise = asyncHandler(async (req, res) => {
 //@access Private
 
 export const getExercises = asyncHandler(async (req, res) => {
-	const exercises = await Prisma.exercise.findMany();
+	const exercises = await Prisma.exercise.findMany({
+		orderBy: {
+			createdAt: 'desc'
+		}
+	});
 
 	res.json(exercises);
 });
