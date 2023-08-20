@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import jwt from 'jsonwebtoken'
 
 export const generateToken = userId =>
 	jwt.sign(
@@ -9,4 +9,4 @@ export const generateToken = userId =>
 		{
 			expiresIn: '10d'
 		}
-	);
+	)

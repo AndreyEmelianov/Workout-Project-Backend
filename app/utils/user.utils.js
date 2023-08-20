@@ -5,4 +5,4 @@ export const UserFields = {
 	images: true,
 	updatedAt: true,
 	name: true
-};
+}
